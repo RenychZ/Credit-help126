@@ -1,6 +1,7 @@
 html
     box-sizing: border-box
     font-family: 'roboto', sans-serif
+    
 
 *, *::after, *::before
     box-sizing: inherit
@@ -8,6 +9,7 @@ html
 ul
     list-style: none
     padding: 0
+    margin: 0
 a
     text-decoration: none
     color: #000
@@ -15,13 +17,14 @@ a
 .container
     width: 1200px
     margin: 0 auto
-    padding: 15px
+    padding: 0 15px
 
 .header__wrapper
     display: flex
     justify-content: space-between
     align-items: center
     text-transform: uppercase
+    padding: 10px 0
 
 .header__logo
     width: 250px
@@ -30,7 +33,6 @@ a
     background: linear-gradient(to right, #0d4e21, #22e75d)
     background-clip: text
     color: transparent
-
     align-items: center
     img 
         width: 70px
@@ -61,5 +63,40 @@ a
         font-weight: 900  
     a:hover 
         font-size: 31px
-        transition: .2s       
+        transition: .1s
+    
+
+.footer
+    background-color: #105e27
+
+.footer__wrapper
+    display: flex
+    justify-content: space-between
+    padding: 20px
+    text-transform: uppercase
+    font-size: 13px
+
+.footer__item
+    text-align: center
+
+    .item__title
+        color: #e9f3f7
+        text-transform: uppercase
+        margin-bottom: 15px
+    
+    .nav
+        align-items: top
+        li 
+            margin-bottom: 5px
+            a
+                color: #bbc5c9
+
+    .contacts
+        display: flex
+        justify-content: space-between
+        li 
+            margin: 0 10px
+            img
+                width: 30px
+                height: 30px
 
