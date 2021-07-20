@@ -1,0 +1,65 @@
+html
+    box-sizing: border-box
+    font-family: 'roboto', sans-serif
+
+*, *::after, *::before
+    box-sizing: inherit
+
+ul
+    list-style: none
+    padding: 0
+a
+    text-decoration: none
+    color: #000
+
+.container
+    width: 1200px
+    margin: 0 auto
+    padding: 15px
+
+.header__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+
+.header__logo
+    width: 250px
+    font-size: 24px
+    // color: #26943e
+    background: linear-gradient(to right, #0d4e21, #22e75d)
+    background-clip: text
+    color: transparent
+
+    align-items: center
+    img 
+        width: 70px
+        height: 70px
+        display: block
+        float: left
+        margin-right: 10px
+
+.header__menu
+    li
+        display: inline-block
+        padding-right: 15px
+        a
+            opacity: .6
+        a:hover
+            opacity: 1
+            border-bottom: 2px solid #22923a 
+
+        .active
+            border-bottom: 2px solid #22923a 
+
+.header__phone
+    font-size: 28px
+    width: 300px
+    text-align: center
+    a
+        color: #26943e 
+        font-weight: 900  
+    a:hover 
+        font-size: 31px
+        transition: .2s       
+
