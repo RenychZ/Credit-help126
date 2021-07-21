@@ -1,16 +1,14 @@
 html
     box-sizing: border-box
     font-family: 'roboto', sans-serif
-    padding: 0
-    margin: 0
 
 *, *::after, *::before
     box-sizing: inherit
+    padding: 0
+    margin: 0
 
 ul
     list-style: none
-    padding: 0
-    margin: 0
 a
     text-decoration: none
     color: #000
@@ -19,6 +17,8 @@ a
     width: 1200px
     margin: 0 auto
     padding: 0 15px
+
+    // --------------------- HEADER ---------------------
 
 .header__wrapper
     display: flex
@@ -67,10 +67,44 @@ a
         color: #26943e 
         font-weight: 900  
         display: block
+        transition: .2s
     a:hover 
-        color: #12c539 
-        transition: .1s
+        color: #12c539
 
+        // ------------------------- PROMO ----------------------------
+
+.promo
+    background-color: #b1ebf5
+    .promo__wrapper
+        padding: 40px 0
+        .promo__info
+            max-width: 600px
+            h1
+                font-size: 46px
+                color: #242424
+                margin-bottom: 50px
+            h2 
+                margin-bottom: 50px
+
+
+            .promo__btn
+                display: block
+                width: 230px
+                height: 50px
+                margin: 0 auto
+                text-transform: uppercase
+                border-radius: 6px
+                background-color: #0dbd39
+                color: #fff
+                font-size: 14px
+                font-weight: 700
+
+                    
+
+
+
+
+// ------------------------- FOOTER -------------------------
 
 .footer
     background-color: #105e27
