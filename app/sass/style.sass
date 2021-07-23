@@ -13,6 +13,16 @@ a
     text-decoration: none
     color: #000
 
+.btn
+    display: block
+    margin: 0 auto
+    text-transform: uppercase
+    border-radius: 6px
+    color: #fff
+    font-size: 14px
+    font-weight: 700
+    cursor: pointer
+
 .container
     width: 1200px
     margin: 0 auto
@@ -30,8 +40,7 @@ a
 .header__logo
     width: 250px
     font-size: 24px
-    // color: #26943e
-    background: linear-gradient(to right, #0d4e21, #22e75d)
+    background: linear-gradient(to right, #0d2ebe, #2bb673)
     background-clip: text
     color: transparent
     align-items: center
@@ -50,10 +59,10 @@ a
             opacity: .6
         a:hover
             opacity: 1
-            border-bottom: 2px solid #22923a 
+            border-bottom: 2px solid #0f75bd 
 
         .active
-            border-bottom: 2px solid #22923a 
+            border-bottom: 2px solid #0f75bd 
 
 .header__phone
     font-size: 28px
@@ -64,21 +73,23 @@ a
         font-size: 12px
         display: block
     a
-        color: #26943e 
+        color: #2b9ab6 
         font-weight: 900  
         display: block
-        transition: .2s
+        transition: .6s
     a:hover 
-        color: #12c539
+        color: #0f75bd
 
         // ------------------------- PROMO ----------------------------
 
 .promo
     background-color: #b1ebf5
     .promo__wrapper
-        padding: 40px 0
+        padding: 40px 0 0
+        position: relative
+        display: flex
         .promo__info
-            max-width: 600px
+            max-width: 50%
             h1
                 font-size: 46px
                 color: #242424
@@ -88,16 +99,69 @@ a
 
 
             .promo__btn
-                display: block
                 width: 230px
                 height: 50px
-                margin: 0 auto
-                text-transform: uppercase
-                border-radius: 6px
-                background-color: #0dbd39
-                color: #fff
-                font-size: 14px
-                font-weight: 700
+                background-color: #07091b
+
+        .promo__img
+            background-size: contain
+            background-position: right
+            background-repeat: no-repeat
+            width: 50%
+            height: 450px
+        .promo__img2
+            position: absolute
+            background-size: contain
+            background-position: right
+            background-repeat: no-repeat
+            width: 66%
+            height: 200px
+            opacity: .8
+           
+
+
+.services__wrapper
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 20px
+
+    .services__item
+        width: 355px
+        border: 1px solid #0f75bd
+        border-radius: 7px
+        padding: 18px
+        margin: 20px 0
+        background-color: #f4f7f8
+
+        .item__icon
+            width: 120px
+            height: 120px
+            margin: 0 auto
+            img
+                width: 100%
+
+        .item__title
+            font-size: 20px
+            margin-bottom: 15px
+            text-align: center
+            font-weight: 700
+
+        .item__btn
+            width: 180px
+            height: 40px
+            background-color: #2bb673
+
+    ul
+        list-style: disc
+        margin: 0 0 40px 65px
+        font-size: 18px
+
+    
+            
+                
+
 
                     
 
@@ -107,7 +171,7 @@ a
 // ------------------------- FOOTER -------------------------
 
 .footer
-    background-color: #105e27
+    background-color: #02110f
 
 .footer__wrapper
     display: flex
@@ -145,3 +209,7 @@ a
         font-size: 15px
         line-height: 30px
         text-decoration: underline
+
+
+
+        
