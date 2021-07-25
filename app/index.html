@@ -37,7 +37,7 @@
                 <div class="promo__info">
                     <h1>Получите кредит на выгодных условиях в короткие сроки.</h1>
                     <h2>Работаем на результат, учитываем все Ваши пожелания.</h2>
-                   <button class="promo__btn btn">получить кредит</button>
+                   <button data-modal="consultation" class="promo__btn btn">получить кредит</button>
                 </div>
                 <div class="promo__img2" style="background-image: url('images/icon.png');"></div>
 
@@ -53,7 +53,7 @@
             <div class="services__wrapper">
                 <div class="services__item">
                     <div class="item__icon">
-                        <img src="images/mortgage-icon.png" alt="">
+                        <img src="images/mortgage-icon.png" alt="mortgage-icon">
                     </div>
                     <div class="item__title">Ипотека</div>
                     <ul>
@@ -66,7 +66,7 @@
 
                 <div class="services__item">
                     <div class="item__icon">
-                        <img src="#" alt="">
+                        <img src="images/analysis-icon.png" alt="analysis-icon">
                     </div>
                     <div class="item__title">Кредитно-финансовый анализ</div>
                     <ul>
@@ -79,7 +79,7 @@
 
                 <div class="services__item">
                     <div class="item__icon">
-                        <img src="#" alt="">
+                        <img src="images/business-icon.png" alt="business-icon">
                     </div>
                     <div class="item__title">Кредит для бизнеса</div>
                     <ul>
@@ -92,7 +92,7 @@
 
                 <div class="services__item">
                     <div class="item__icon">
-                        <img src="#" alt="">
+                        <img src="images/pledge-icon.png" alt="pledge-icon">
                     </div>
                     <div class="item__title">Кредит под залог недвижимости</div>
                     <ul>
@@ -118,7 +118,7 @@
 
                 <div class="services__item">
                     <div class="item__icon">
-                        <img src="#" alt="">
+                        <img src="images/credit-icon.png" alt="credit-icon">
                     </div>
                     <div class="item__title">Потребительский кредит</div>
                     <ul>
@@ -188,6 +188,26 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Заполните форму заявки</div>
+            <div class="modal__descr"></div>
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Введите имя" type="text">
+                <input name="phone" required placeholder="Введите номер телефона" type="number">
+                <input name="email" required placeholder="Введите Ваш E-mail" type="email">
+                <button class="btn__submit btn">заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="modal modal-mini">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Ваша заявка принята!</div>
+            <div class="modal__descr">Мы свяжемся с Вами в ближайшее время.</div>
+        </div>
+    </div>
     
 
 
