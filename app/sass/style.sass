@@ -73,7 +73,6 @@ a
     .modal__close:hover
         color: #b81313
 
-
     .modal__title
         font-size: 20px
         margin-bottom: 15px
@@ -90,9 +89,16 @@ a
         
         .btn__submit
             margin-top: 50px
+
 .modal-mini
     display: none
     min-height: 140px
+
+.modal-confid
+    width: 1000px
+    height: 560px
+    .modal__descr
+        text-align: left
     
 
     // --------------------- HEADER ---------------------
@@ -105,9 +111,7 @@ header
     background-color: #fff
     z-index: 100
     border-bottom: 1px solid #e5e2e2
-
-
-    
+ 
 .header__wrapper
     display: flex
     justify-content: space-between
@@ -139,9 +143,6 @@ header
             opacity: 1
             border-bottom: 2px solid #0f75bd 
 
-        .active
-            border-bottom: 2px solid #0f75bd 
-
 .header__phone
     font-size: 28px
     width: 300px
@@ -154,7 +155,7 @@ header
         color: #2b9ab6 
         font-weight: 900  
         display: block
-        transition: .6s
+        transition: .5s ease
     a:hover 
         color: #0f75bd
 
@@ -272,30 +273,20 @@ header
         display: flex
         justify-content: center
 
-
         a
             display: block
-            width: 120px
-            height: 120px
+            width: 130px
+            height: 130px
             margin: 0 50px
             cursor: pointer
             img
+                transition: all .1s ease
+                width: 90%
+        a:hover 
+            img
                 width: 100%
-
-
+            
         
-            
-
-    
-            
-                
-
-
-                    
-
-
-
-
 // ------------------------- FOOTER -------------------------
 
 .footer
@@ -340,7 +331,6 @@ header
         font-size: 12px
         text-align: center
         text-transform: none
-
 
     .footer__phone
         color: #fff

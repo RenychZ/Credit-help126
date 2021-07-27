@@ -4,6 +4,7 @@ const consultation = document.querySelectorAll('.btn'),
     overlay = document.querySelector('.overlay'),
     modal = document.querySelector('.modal'),
     closer = document.querySelectorAll('.modal__close'),
+    confid = document.querySelector('.confid'),
     submit = document.getElementById('submit');
 
 
@@ -17,6 +18,7 @@ const consultation = document.querySelectorAll('.btn'),
     cons.forEach(i => {
         i.addEventListener('click', openModal);
     });
+    confid.addEventListener('click', confidModal);
     
     function openModal() {
         overlay.classList.add('active');
@@ -27,7 +29,15 @@ const consultation = document.querySelectorAll('.btn'),
     function closeModal() {
         overlay.classList.remove('active');
         modal.classList.remove('active');
+        document.getElementById('modal-confid').classList.remove('active');
         closer.removeEventListener('click', closeModal);
+        confid.removeEventListener('click', confidModal);
+
+    }
+
+    function confidModal() {
+        overlay.classList.add('active');
+        document.getElementById('modal-confid').classList.add('active');
     }
 
     
