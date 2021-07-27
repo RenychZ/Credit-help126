@@ -19,8 +19,6 @@ a
     text-transform: uppercase
     border-radius: 6px
     border: 1px solid #000
-    
-
     color: #fff
     font-size: 14px
     font-weight: 700
@@ -37,54 +35,79 @@ a
     // ------------------------- Modal -------------------------
 
 .overlay
-    display: none
+    opacity: 0
+    visibility: hidden
     position: fixed
     width: 100%
     height: 100%
     top: 0
+    left: 0
     background-color: rgba(0,0,0,.65)
-    .modal
-        display: none
-        width: 360px
-        min-height: 350px
-        padding: 30px
-        background-color: #f2f2f2
+    transition: all 0.3s ease
+    z-index: 110
+
+.modal
+    opacity: 0
+    visibility: hidden
+    width: 370px
+    min-height: 350px
+    padding: 30px
+    background-color: #f2f2f2
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    transition: all 0.5s 
+    z-index: 111
+.active 
+    visibility: visible
+    opacity: 1
+    .modal__close
         position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        text-align: center
+        right: -40px
+        top: -25px
+        font-size: 50px
+        color: #eb1a1a
+        cursor: pointer
+    .modal__close:hover
+        color: #b81313
 
-        .modal__close
-            position: absolute
-            right: -40px
-            top: -25px
-            font-size: 50px
-            color: #df1717
-            cursor: pointer
 
-        .modal__title
-            font-size: 20px
-            margin-bottom: 15px
-        .feed-form
-            margin: 0 auto
-            display: flex
-            flex-direction: column
-            input
-                height: 40px
-                margin-bottom: 10px
-                border: 1px solid gray
-                border-radius: 5px
-                padding: 5px 10px
-            
-            .btn__submit
-                margin-top: 50px
-    .modal-mini
-        min-height: 140px
-
+    .modal__title
+        font-size: 20px
+        margin-bottom: 15px
+    .feed-form
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        input
+            height: 40px
+            margin-bottom: 10px
+            border: 1px solid gray
+            border-radius: 5px
+            padding: 5px 10px
+        
+        .btn__submit
+            margin-top: 50px
+.modal-mini
+    display: none
+    min-height: 140px
+    
 
     // --------------------- HEADER ---------------------
 
+header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    z-index: 100
+    border-bottom: 1px solid #e5e2e2
+
+
+    
 .header__wrapper
     display: flex
     justify-content: space-between
@@ -138,6 +161,7 @@ a
         // ------------------------- PROMO ----------------------------
 
 .promo
+    margin-top: 90px
     background-color: #b1ebf5
     .promo__wrapper
         padding: 40px 0 0
@@ -168,7 +192,7 @@ a
             opacity: .8
 
 
-//  -------------------------- services -------------------------           
+//  -------------------------- SERVICES -------------------------           
            
 
 .services__wrapper
@@ -182,7 +206,7 @@ a
         width: 355px
         border: 1px solid #0f75bd
         border-radius: 7px
-        padding: 18px
+        padding: 16px
         margin: 20px 0
         background-color: #f4f7f8
 
@@ -194,7 +218,7 @@ a
                 width: 100%
 
         .item__title
-            font-size: 20px
+            font-size: 19px
             margin-bottom: 15px
             text-align: center
             font-weight: 700
@@ -208,6 +232,59 @@ a
         list-style: disc
         margin: 0 0 40px 65px
         font-size: 18px
+
+// ------------------------- ABOUT --------------------------
+
+.about
+    background-color: #d3f7e3
+
+    &__wrapper
+        padding: 30px
+        h2
+            display: block
+            text-align: center
+            margin-bottom: 20px
+        p
+            margin-bottom: 30px
+            font-size: 18px
+            line-height: 26px
+
+        .about__benefits
+            font-size: 18px
+            margin-bottom: 20px
+            ul
+                list-style: disc
+                margin-left: 20px
+                li 
+                    margin-bottom: 5px
+
+
+// ------------------------- CONTACTS -------------------------
+
+.contacts__wrapper
+    padding: 40px
+    h2
+        text-align: center
+        margin-bottom: 50px
+    
+    .contacts__items
+        margin-bottom: 30px
+        display: flex
+        justify-content: center
+
+
+        a
+            display: block
+            width: 120px
+            height: 120px
+            margin: 0 50px
+            cursor: pointer
+            img
+                width: 100%
+
+
+        
+            
 
     
             
@@ -231,9 +308,6 @@ a
     text-transform: uppercase
     font-size: 13px
 
-.footer__item
-    // text-align: center
-
     .item__title
         color: #e9f3f7
         text-transform: uppercase
@@ -245,15 +319,28 @@ a
             margin-bottom: 5px
             a
                 color: #bbc5c9
+                
+            a:hover
+                color: #f1f6f7
+                text-decoration: underline
+                transition: all .2s
 
-    .contacts
+    .social
         display: flex
         justify-content: space-between
+        margin-bottom: 10px
         li 
             margin: 0 10px
             img
                 width: 30px
                 height: 30px
+    
+    .web
+        color: #fff
+        font-size: 12px
+        text-align: center
+        text-transform: none
+
 
     .footer__phone
         color: #fff
