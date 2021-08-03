@@ -13,7 +13,7 @@ gulp.task('sass', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(autoprefixer({overrideBrowserslist: ['last 8 versions'], cascade: false}))
         .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.reload({ stream: true}))
+        .pipe(browserSync.reload({ stream: true}));
 });
 
 gulp.task('style', function(){
@@ -24,7 +24,7 @@ gulp.task('style', function(){
     ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('script', function(){
@@ -34,17 +34,17 @@ gulp.task('script', function(){
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('app/js'));
 });
 
 gulp.task('html', function(){
     return gulp.src('app/*.html')
-        .pipe(browserSync.reload({ stream: true}))
+        .pipe(browserSync.reload({ stream: true}));
 });
 
 gulp.task('js', function(){
     return gulp.src('app/js/*.js')
-        .pipe(browserSync.reload({ stream: true}))
+        .pipe(browserSync.reload({ stream: true}));
 });
 
 gulp.task('browser-sync', function() {
@@ -61,4 +61,4 @@ gulp.task('watch', function(){
     gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'))
+gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'));
