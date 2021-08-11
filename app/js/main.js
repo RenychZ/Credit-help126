@@ -16,7 +16,7 @@ $('.modal__close').on('click', function(){
 
 $('.overlay').on('click', (e) => {
     if($(e.target).closest('.modal').length == 0) {
-        $('.overlay, #modal').fadeOut();
+        $('.overlay, #modal, #modal-confid, #modal-mini').fadeOut();
         // $(this).fadeOut();
     }
 });
