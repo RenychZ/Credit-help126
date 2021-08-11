@@ -1,340 +1,387 @@
 html
-    box-sizing: border-box
-    font-family: 'roboto', sans-serif
+	box-sizing: border-box
+	font-family: 'roboto', sans-serif
 
 *, *::after, *::before
-    box-sizing: inherit
-    padding: 0
-    margin: 0
+	box-sizing: inherit
+	padding: 0
+	margin: 0
 
-ul
-    list-style: none
-a
-    text-decoration: none
-    color: #000
-
-.btn
-    display: block
-    margin: 0 auto
-    text-transform: uppercase
-    border-radius: 6px
-    border: 1px solid #000
-    color: #fff
-    font-size: 14px
-    font-weight: 700
-    cursor: pointer
-    width: 230px
-    height: 50px
-    background-color: #07091b
 
 .container
-    width: 1200px
-    margin: 0 auto
-    padding: 0 15px
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 15px
+	
+ul
+	list-style: none
+a
+	text-decoration: none
+	color: #000
 
-    // ------------------------- Modal -------------------------
+.logo
+	font-size: 24px
+	font-weight: 500
+	background: linear-gradient(to right, #0d2ebe, #2bb673)
+	background-clip: text
+	color: transparent
+	align-items: center
+	img 
+		width: 60px
+		height: 60px
+		display: block
+		float: left
+		margin-right: 10px
+
+.btn
+	display: block
+	width: 230px
+	height: 50px
+	margin: 0 auto
+	text-transform: uppercase
+	border-radius: 6px
+	border: 1px solid #000
+	color: #fff
+	font-size: 14px
+	font-weight: 700
+	cursor: pointer
+	background-color: #07091b
+
+	// ------------------------- Modal -------------------------
 
 .overlay
-    display: none
-    position: fixed
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    background-color: rgba(0,0,0,.65)
-    z-index: 110
+	display: none
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba(0,0,0,.65)
+	z-index: 110
 
 .modal
-    display: none
-    width: 370px
-    min-height: 350px
-    padding: 30px
-    background-color: #f2f2f2
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    text-align: center
-    z-index: 111
+	display: none
+	width: 370px
+	min-height: 380px
+	padding: 25px
+	background-color: #f2f2f2
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	text-align: center
+	z-index: 111
 
-    .modal__close
-        position: absolute
-        right: -40px
-        top: -25px
-        font-size: 50px
-        color: #eb1a1a
-        cursor: pointer
-    .modal__close:hover
-        color: #b81313
+	.modal__close
+		position: absolute
+		right: -30px
+		top: -25px
+		font-size: 45px
+		color: #eb1a1a
+		cursor: pointer
+	.modal__close:hover
+		color: #b81313
 
-    .modal__title
-        font-size: 20px
-        margin-bottom: 15px
-    .feed-form
-        margin: 0 auto
-        display: flex
-        flex-direction: column
-        input
-            height: 40px
-            margin-bottom: 10px
-            border: 1px solid gray
-            border-radius: 5px
-            padding: 5px 10px
-        
-        .btn__submit
-            margin-top: 50px
+	.modal__title
+		font-size: 20px
+		margin-bottom: 15px
+	.feed-form
+		margin: 0 auto
+		display: flex
+		flex-direction: column
+		input
+			height: 40px
+			margin-bottom: 10px
+			border: 1px solid gray
+			border-radius: 5px
+			padding: 5px 10px
+		
+		.submit__btn
+			margin-top: 35px
+			width: 230px
+			height: 45px
+			padding: 0 5px
 
 .modal-mini
-    display: none
-    min-height: 140px
+	display: none
+	min-height: 140px
 
 .modal-confid
-    width: 1000px
-    height: 560px
-    .modal__descr
-        text-align: left
+	width: 1000px
+	height: 80%
+	.modal__descr
+		max-height: 88%
+		text-align: left
+		overflow: auto
 
 .active 
-    display: block
-    
+	display: block
 
-    // --------------------- HEADER ---------------------
+	// --------------------- HEADER ---------------------
 
-header
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    background-color: #fff
-    z-index: 100
-    border-bottom: 1px solid #e5e2e2
- 
-.header__wrapper
-    display: flex
-    justify-content: space-between
-    align-items: center
-    text-transform: uppercase
-    padding: 10px 0
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background-color: #fff
+	z-index: 100
+	border-bottom: 1px solid #e5e2e2
+	.header__wrapper
+		display: flex
+		justify-content: space-between
+		position: relative
+		align-items: center
+		text-transform: uppercase
+		padding: 10px 0
+		.header__logo
+			width: 240px
+		.header__menu
+			li
+				display: inline-block
+				margin: 0 6px
+				a
+					opacity: .7
+				a:hover
+					border-bottom: 2px solid #31363a 
+		.header__phone
+			font-size: 28px
+			span
+				font-size: 12px
+				display: block
+			a
+				color: #2b9ab6 
+				font-weight: 900  
+				display: inline-block
+				position: relative
+				transition: .5s ease
+			a::before
+				display: none
+				content: ""
+				width: 21px
+				height: 21px
+				opacity: .9
+				background: url('../images/telephone.png')
+				position: absolute
+				top: 5px
+				left: -22px
+				background-size: contain
+				background-repeat: no-repeat
+			a:hover
+				color: #0f75bd
+		.burger
+			display: none
+			position: absolute
+			top: 35px
+			right: 10px
+			.burger__btn
+				position: relative
+				width: 40px
+				transition-duration: 1s
+				span
+					top: -10px
+			.burger__btn::before, .burger__btn::after, span
+				content: ""
+				position: absolute
+				width: 100%
+				height: 5px
+				background-color: #044940
+				border-radius: 20px
+				transition-duration: .3s
+			.burger__btn::before
+				top: 0
+			.burger__btn::after
+				top: 10px
+		.burger__menu
+			display: none
+	.open
+		.burger__btn::before 
+			transform: rotate(45deg)
+			top: 5px !important
+			transition: 0.4s		 
+		.burger__btn::after 
+			top: 5px !important
+			transform: rotate(-45deg)
+			transition: 0.4s
+		span
+			opacity: 0
+			transition: 0.4s	 
 
-.header__logo
-    width: 250px
-    font-size: 24px
-    background: linear-gradient(to right, #0d2ebe, #2bb673)
-    background-clip: text
-    color: transparent
-    align-items: center
-    img 
-        width: 70px
-        height: 70px
-        display: block
-        float: left
-        margin-right: 10px
-
-.header__menu
-    li
-        display: inline-block
-        padding-right: 15px
-        a
-            opacity: .6
-        a:hover
-            opacity: 1
-            border-bottom: 2px solid #0f75bd 
-
-.header__phone
-    font-size: 28px
-    width: 300px
-    text-align: center
-
-    span
-        font-size: 12px
-        display: block
-    a
-        color: #2b9ab6 
-        font-weight: 900  
-        display: block
-        transition: .5s ease
-    a:hover 
-        color: #0f75bd
-
-        // ------------------------- PROMO ----------------------------
+		// ------------------------- PROMO ----------------------------
 
 .promo
-    margin-top: 90px
-    background-color: #b1ebf5
-    .promo__wrapper
-        padding: 40px 0 0
-        position: relative
-        display: flex
-        .promo__info
-            max-width: 50%
-            h1
-                font-size: 46px
-                color: #242424
-                margin-bottom: 50px
-            h2 
-                margin-bottom: 50px
-
-        .promo__img
-            background-size: contain
-            background-position: right
-            background-repeat: no-repeat
-            width: 50%
-            height: 450px
-        .promo__img2
-            position: absolute
-            background-size: contain
-            background-position: right
-            background-repeat: no-repeat
-            width: 66%
-            height: 200px
-            opacity: .8
+	margin-top: 80px
+	background-color: #b1ebf5
+	&__wrapper
+		padding: 40px 10px 0
+		display: flex
+		justify-content: space-between
+		.promo__info
+			max-width: 500px
+			padding: 0 10px 30px
+			h1
+				font-size: 50px
+				color: #242424
+				margin-bottom: 70px
+			h2
+				margin-bottom: 70px
+				font-size: 30px
+		.promo__images
+			position: relative
+			max-width: 500px
+			.img-promo
+				width: 100%
+				height: 100%	
+			.icon-promo
+				position: absolute
+				width: 210px
+				height: 210px
+				left: -80px
+				opacity: .8
 
 
 //  -------------------------- SERVICES -------------------------           
-           
+		   
 
 .services__wrapper
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-between
-    padding: 20px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding: 20px 0
+	
 
-    .services__item
-        width: 355px
-        border: 1px solid #0f75bd
-        border-radius: 7px
-        padding: 16px
-        margin: 20px 0
-        background-color: #f4f7f8
+	.services__item
+		width: 31%
+		border: 1px solid #0f75bd
+		border-radius: 7px
+		padding: 16px 0
+		margin: 20px 0
+		background-color: #f4f7f8
 
-        .item__icon
-            width: 130px
-            height: 130px
-            margin: 0 auto
-            img
-                width: 100%
+		.item__icon
+			width: 130px
+			height: 130px
+			margin: 0 auto
+			img
+				width: 100%
 
-        .item__title
-            font-size: 19px
-            margin-bottom: 15px
-            text-align: center
-            font-weight: 700
+		h3
+			font-size: 19px
+			margin-bottom: 15px
+			text-align: center
+			font-weight: 700
 
-        .item__btn
-            width: 180px
-            height: 40px
-            background-color: #2bb673
+		.item__btn
+			width: 180px
+			height: 40px
+			background-color: #2bb673
 
-    ul
-        list-style: disc
-        margin: 0 0 40px 65px
-        font-size: 18px
+	ul
+		list-style: disc
+		margin: 0 0 40px 65px
+		font-size: 18px
 
 // ------------------------- ABOUT --------------------------
 
 .about
-    background-color: #d3f7e3
+	background-color: #d3f7e3
+	&__wrapper
+		padding: 30px
+		h2
+			display: block
+			text-align: center
+			margin-bottom: 20px
+		p
+			margin-bottom: 30px
+			font-size: 18px
+			line-height: 26px
 
-    &__wrapper
-        padding: 30px
-        h2
-            display: block
-            text-align: center
-            margin-bottom: 20px
-        p
-            margin-bottom: 30px
-            font-size: 18px
-            line-height: 26px
-
-        .about__benefits
-            font-size: 18px
-            margin-bottom: 20px
-            ul
-                list-style: disc
-                margin-left: 20px
-                li 
-                    margin-bottom: 5px
+		.about__benefits
+			font-size: 18px
+			margin-bottom: 20px
+			ul
+				list-style: disc
+				margin-left: 20px
+				li 
+					margin-bottom: 15px
 
 
 // ------------------------- CONTACTS -------------------------
 
 .contacts__wrapper
-    padding: 40px
-    h2
-        text-align: center
-        margin-bottom: 50px
-    
-    .contacts__items
-        margin-bottom: 30px
-        display: flex
-        justify-content: center
+	padding: 35px
+	h2
+		text-align: center
+		margin-bottom: 50px
+	
+	.contacts__items
+		margin-bottom: 25px
+		display: flex
+		justify-content: space-evenly
 
-        a
-            display: block
-            width: 130px
-            height: 130px
-            margin: 0 50px
-            cursor: pointer
-            img
-                transition: all .1s ease
-                width: 90%
-        a:hover 
-            img
-                width: 100%
-            
-        
+		a
+			display: block
+			width: 130px
+			height: 130px
+			margin: 0 50px
+			cursor: pointer
+			img
+				transition: all .1s ease
+				width: 90%
+		a:hover 
+			img
+				width: 100%
+			
+		
 // ------------------------- FOOTER -------------------------
 
 .footer
-    background-color: #02110f
-
-.footer__wrapper
-    display: flex
-    justify-content: space-between
-    padding: 20px
-    text-transform: uppercase
-    font-size: 13px
-
-    .item__title
-        color: #e9f3f7
-        text-transform: uppercase
-        margin-bottom: 15px
-    
-    .nav
-        align-items: top
-        li 
-            margin-bottom: 5px
-            a
-                color: #bbc5c9
-                
-            a:hover
-                color: #f1f6f7
-                text-decoration: underline
-                transition: all .2s
-
-    .social
-        display: flex
-        justify-content: space-between
-        margin-bottom: 10px
-        li 
-            margin: 0 10px
-            img
-                width: 30px
-                height: 30px
-    
-    .web
-        color: #fff
-        font-size: 12px
-        text-align: center
-        text-transform: none
-
-    .footer__phone
-        color: #fff
-        font-size: 15px
-        line-height: 30px
-        text-decoration: underline
-
+	background-color: #02110f
+	.footer__wrapper
+		display: flex
+		justify-content: space-between
+		padding: 20px 10px
+		text-transform: uppercase
+		font-size: 13px
+		.footer__item
+			.footer__logo
+				width: 240px
+				font-size: 20px
+				margin-bottom: 20px
+			.footer__phone
+				color: #fff
+				font-size: 16px
+				text-decoration: underline
+				margin-left: 40px
+			.item__title
+				color: #e9f3f7
+				text-transform: uppercase
+				margin-bottom: 15px
+			.nav
+				align-items: top
+				li 
+					margin-bottom: 8px
+					a
+						color: #bbc5c9	
+					a:hover
+						color: #f1f6f7
+						text-decoration: underline
+						transition: all .2s
+			.social
+				display: flex
+				justify-content: space-between
+				margin-bottom: 15px
+				li 
+					margin: 0 10px
+					img
+						width: 38px
+						height: 38px	
+			.web
+				color: #fff
+				font-size: 12px
+				text-align: center
+				text-transform: none
+			
 
 
-        
+@import "media"

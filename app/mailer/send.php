@@ -14,12 +14,12 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'credit.help126@mail.ru';                 // Наш логин
+$mail->Username = 'Credit.help126@mail.ru';                 // Наш логин
 $mail->Password = 'Credit126';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('', 'Кредитные Решения');   // От кого письмо 
+$mail->setFrom('Credit.help126@mail.ru', 'Кредитные Решения');   // От кого письмо 
 $mail->addAddress('credit.help126@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -31,7 +31,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Новая Заявка';
 $mail->Body    = '
-		Пользователь оставил данные <br> 
+		Данные клиента <br> 
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '<br>
 	Желаеммая сумма: ' .$sum . '<br>
