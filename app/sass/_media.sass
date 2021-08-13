@@ -6,25 +6,35 @@
 	.promo
 		&__wrapper
 			.promo__info
-				margin-right: 20px
 				h1
-					font-size: 44px
-					margin-bottom: 55px
-				h2
-					font-size: 30px
+					font-size: 47px
 			.promo__images
 				.icon-promo
 					display: none
 	.modal-confid
 		width: 88%
 
+@media (max-width: 1068px)
+	.promo
+		&__wrapper
+			.promo__info
+				h1
+					font-size: 44px
+					margin-bottom: 55px
+				h2
+					font-size: 29px
+					margin-bottom: 55px
+			.promo__images
+				.img-promo
+					width: 450px
+					height: 453px		
+
 @media (max-width: 1023px)
 	.header
 		.header__wrapper
+			padding-top: 10px
 			display: block
 			position: relative
-			.header__logo
-				display: inline-block
 			.header__menu
 				text-align: center
 				li
@@ -42,19 +52,7 @@
 				span
 					display: none
 	.promo
-		margin-top: 98px
-		&__wrapper
-			.promo__info
-				h1
-					font-size: 40px
-					margin-bottom: 45px
-				h2
-					font-size: 29px
-					margin-bottom: 50px
-				.promo__btn
-			.promo__images
-				.icon-promo
-					display: none
+		margin-top: 101px
 	.services
 		.services__wrapper
 			justify-content: space-around
@@ -64,16 +62,22 @@
 		.modal__descr
 			font-size: 15px
 
-@media (max-width: 990px)
+@media (max-width: 980px)
 	.promo
 		&__wrapper
 			.promo__info
 				margin-right: 0
 				h1
-					font-size: 34px
+					font-size: 38px
 					margin-bottom: 50px
+					margin-top: 10px
 				h2
-					font-size: 24px
+					font-size: 27px
+					margin-bottom: 50px
+			.promo__images
+				.img-promo
+					width: 425px
+					height: 428px
 	.contacts
 		.contacts__wrapper
 			h2
@@ -92,25 +96,28 @@
 @media (max-width: 889px)
 	.header
 		.header__wrapper
-			.header__logo
-				font-size: 22px
+			.header__menu
+				text-align: right
 			.header__phone
-				font-size: 24px
+				font-size: 23px
+				a::before
+					width: 22px
+					height: 22px
 	.promo
 		&__wrapper
 			.promo__info
+				margin-right: 0
 				h1
-					font-size: 32px
-					margin-bottom: 30px
-				h2
-					font-size: 22px
+					font-size: 34px
 					margin-bottom: 45px
-				.promo__btn
-					margin-bottom: 0
+					margin-top: 10px
+				h2
+					font-size: 23px
+					margin-bottom: 45px
 			.promo__images
 				.img-promo
-					display: block
-					width: 100%
+					width: 390px
+					height: 393px
 	.services
 		.services__wrapper
 			.services__item
@@ -126,16 +133,25 @@
 			.about__benefits
 				font-size: 17px
 	
-@media (max-width: 789px)
+@media (max-width: 793px)
+	.header
+		.header__wrapper
+			.header__menu
+				li
+					font-size: 15px
 	.promo
 		&__wrapper
-			padding: 25px 20px 0
+			padding: 25px 10px 0
 			.promo__info
 				h1
-					font-size: 30px
-					margin-bottom: 26px
+					font-size: 31px
+					margin-bottom: 28px
 				h2
-					font-size: 20px
+					font-size: 21px
+			.promo__images
+				.img-promo
+					width: 350px
+					height: 353px		
 	.services
 		.services__wrapper
 			.services__item
@@ -143,48 +159,73 @@
 	.footer
 		.footer__wrapper
 			.footer__item
-				max-width: 230px
-				.footer__logo
-					width: 230px
+				.nav
+					margin-left: 50px
+					li
+						width: 90%
 	
-@media (max-width: 710px)
+@media (max-width: 732px)
 	.promo
 		&__wrapper
+			padding: 25px 5px 0
 			.promo__info
 				h1
 					font-size: 28px
-					margin-bottom: 26px
+					margin-bottom: 28px
 				h2
-					font-size: 18px
+					font-size: 19px
 					margin-bottom: 40px
+			.promo__images
+				.img-promo
+					width: 320px
+					height: 323px
 	.services
 		.services__wrapper
 			justify-content: space-between
+	.footer
+		.footer__wrapper
+			.footer__item
+				.nav
+					margin-left: 30px
 
 @media (max-width: 664px)	
 	.header
 		.header__wrapper
 			.header__menu
-				margin-top: 2px
-				li
-					margin: 0 5px
+				display: none
+			.header__phone
+				float: right
+				margin-top: 5px
+				font-size: 20px
+				margin-right: 60px
+				a::before
+					width: 20px
+					height: 20px
+					left: -25px
+			.burger
+				display: block
+			.burger__menu
+				margin-left: 35px
+				margin-top: 10px
+				display: none
+				text-align: center
+				font-weight: 700
+				font-size: 16px
 	.promo
-		margin-top: 100px
+		margin-top: 83px
 		&__wrapper
-			padding: 10px 20px 20px
-			display: block
+			padding: 25px 5px 0
 			.promo__info
-				margin-left: 20px
-				max-width: none
 				h1
-					font-size: 42px
-					margin-bottom: 40px
+					font-size: 26px
+					margin-bottom: 28px
 				h2
-					font-size: 29px
-					margin-bottom: 50px
+					font-size: 17px
+					margin-bottom: 40px
 			.promo__images
 				.img-promo
-					display: none
+					width: 280px
+					height: 283px
 	.services
 		.services__wrapper
 			justify-content: center
@@ -200,23 +241,18 @@
 				margin-right: 0
 				.footer__logo
 					display: inline-block
-					font-size: 24px
-					margin-bottom: 0
-					img
-						width: 70px
-						height: 70px
 				.footer__phone
 					display: block
 					font-size: 21px
 					float: right
-					margin: 20px 0 0 20px
+					margin: 10px 0 0
 				.nav
-					margin-top: 25px
+					margin: 25px 0 30px
 					text-align: center
 					font-size: 15px
-					margin-bottom: 30px
 					li
 						margin-bottom: 10px
+						width: 100%
 				.item__title
 					text-align: center
 					margin-bottom: 20px
@@ -225,33 +261,45 @@
 				.web
 					font-size: 15px
 
-@media (max-width: 559px)
+@media (max-width: 629px)
+	.promo
+		&__wrapper
+			padding: 25px 40px 40px
+			.promo__info
+				h1
+					font-size: 40px
+					margin-bottom: 40px
+				h2
+					font-size: 28px
+					margin-bottom: 50px
+			.promo__images
+				display: none
+
+@media (max-width: 579px)
 	.header
 		.header__wrapper
 			.header__logo
-				width: 200px
-				font-size: 21px
 				img
-					width: 60px
-					height: 60px
-			.header__menu
-				display: none
+					width: 220px
+					height: 55px
 			.header__phone
-				position: initial
 				float: right
-				margin-top: 10px
-				font-size: 22px
+				margin-top: 5px
+				font-size: 18px
+				margin-right: 55px
 				a::before
-					width: 23px
-					height: 23px
-					left: -25px
-			.burger__menu
-				margin-left: 35px
+					width: 18px
+					height: 18px
+					left: -20px
+			.burger
 				display: block
-				text-align: center
-				font-weight: 500
-				font-size: 16px
+			.burger__menu
+				display: none
+				font-size: 15px
+				li
+					margin: 0 6px
 	.promo
+		margin-top: 78px
 		&__wrapper
 			.promo__info
 				h1
@@ -262,24 +310,29 @@
 		.footer__wrapper
 			.footer__phone
 					font-size: 19px
-	
-@media (max-width: 479px)
+
+@media (max-width: 519px)
 	.header
 		.header__wrapper
-			padding-bottom: 0
 			.header__phone
-				margin-left: 75px
+				position: initial
 				float: none
-				margin-top: 0
-				margin-bottom: 15px
-			.burger
-				display: block
-			.burger__menu
-				display: none
-				li
-					margin-bottom: 8px
+				font-size: 18px
+				margin-top: -5px
+				margin-left: 70px
+				a::before
+					width: 18px
+					height: 18px
 	.promo
-		margin-top: 111px
+		margin-top: 93px
+	.footer
+		.footer__wrapper
+			.footer__item
+				.footer__phone
+					font-size: 19px
+	
+@media (max-width: 479px)
+	.promo
 		&__wrapper
 			.promo__info
 				h1
@@ -299,8 +352,8 @@
 				.footer__phone
 					display: initial
 					float: none
-					font-size: 16px
-					margin-left: 0
+					margin-left: 60px
+					font-size: 17px
 	.modal
 		width: 80%
 		#submit
@@ -309,17 +362,12 @@
 @media (max-width: 435px)
 	.header
 		.header__wrapper
-			.header__logo
-				img
-					width: 55px
-					height: 55px
 			.burger
 				top: 30px
 				right: 5px
 			.burger__menu
 				font-size: 14px
 	.promo
-		margin-top: 106px
 		&__wrapper
 			padding: 10px 10px 20px
 			.promo__info
@@ -334,21 +382,41 @@
 @media (max-width: 414px)
 	.header
 		.header__wrapper
-			.header__phone
-				font-size: 19px
 			.burger__menu
 				font-size: 14px
 				margin-left: 0
 				li
-					margin: 0 2px 8px
+					margin: 5px 2px 0
 	.promo
-		margin-top: 102px
 		&__wrapper
 			padding: 10px 10px 20px
 			.promo__info
 				margin-left: 0
 				h1
-					font-size: 31px
+					font-size: 29px
+				h2
+					font-size: 19px
+				.promo__btn
+					margin-bottom: 15px
+
+@media (max-height: 376px)
+	.modal
+		.modal__title
+			font-size: 16px
+		.feed-form
+			input
+				height: 33px
+			.submit__btn
+				height: 38px
+				margin-top: 15px
+				margin-bottom: 0
+
+
+
+
+
+
+	
 
 
 
