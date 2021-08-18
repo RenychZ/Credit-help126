@@ -34,12 +34,18 @@ $('form').on('submit', function(e){
 
 $('.burger__btn').on('click', function() {
     $('.burger__menu').toggle('.burger__menu');
-    $('.burger').toggleClass('open');
-});
+    $('.burger').toggleClass('open');   
+}); 
 
+window.addEventListener('orientationchange', function() {
+    $('.burger__menu').hide();
+    $('.burger').removeClass('open');   
+    }, 
+    false
+);
 
 $('body').on('click', (e) => {
-    if($(e.target).closest('.header').length == 0 && window.innerWidth < 480) {
+    if($(e.target).closest('.header').length == 0 && window.innerWidth > 480) {
         $('.burger__menu').hide(400);
         $('.burger').removeClass('open');
     }        
